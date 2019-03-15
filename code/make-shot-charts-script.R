@@ -71,3 +71,66 @@ ggsave("../images/draymond-green-shot-chart.pdf", width=6.5, height=5)
 
 
 
+## Draymond Green Shot Chart ##
+green_scatterplot <- ggplot(data = green) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag))
+green_scatterplot
+
+green_shot_chart <- ggplot(data = green) +
+  annotation_custom(court_image, -250, 250, -50, 420) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) +
+  ylim(-50, 420) +
+  ggtitle('Shot Chart: Draymond Green (2016 season)') +
+  theme_minimal()
+
+green_shot_chart
+ggsave("../images/draymond-green-shot-chart.pdf", width=6.5, height=5)
+
+
+## Kevin Durant Shot Chart ##
+durant_scatterplot <- ggplot(data = durant) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag))
+durant_scatterplot
+
+durant_shot_chart <- ggplot(data = durant) +
+  annotation_custom(court_image, -250, 250, -50, 420) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) +
+  ylim(-50, 420) +
+  ggtitle('Shot Chart: Kevin Durant (2016 season)') +
+  theme_minimal()
+
+durant_shot_chart
+ggsave("../images/kevin-durant-shot-chart.pdf", width=6.5, height=5)
+
+
+## Klay Thompson Shot Chart ##
+
+thompson_scatterplot <- ggplot(data = thompson) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag))
+thompson_scatterplot
+
+thompson_shot_chart <- ggplot(data = thompson) +
+  annotation_custom(court_image, -250, 250, -50, 420) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) +
+  ylim(-50, 420) +
+  ggtitle('Shot Chart: Klay Thompson (2016 season)') +
+  theme_minimal()
+
+durant_shot_chart
+ggsave("../images/klay-thompson-shot-chart.pdf", width=6.5, height=5)
+
+
+## Stephen Curry Shot Chart ##
+curry_scatterplot <- ggplot(data = curry) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag))
+curry_scatterplot
+
+curry_shot_chart <- ggplot(data = curry) +
+  annotation_custom(court_image, -250, 250, -50, 420) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) +
+  ylim(-50, 420) +
+  ggtitle('Shot Chart: Stephen Curry (2016 season)') +
+  theme_minimal()
+
+durant_shot_chart
+ggsave("../images/stephen-curry-shot-chart.pdf", width=6.5, height=5)
