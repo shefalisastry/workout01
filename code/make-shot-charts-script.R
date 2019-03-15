@@ -34,3 +34,40 @@ thompson_shot_chart <- ggplot(data = thompson) +
   theme_minimal()
 
 thompson_shot_chart
+
+
+## Iguodala Shot Chart ##
+iguodala_scatterplot <- ggplot(data = iguodala) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag))
+iguodala_scatterplot
+
+iguodala_shot_chart <- ggplot(data = iguodala) +
+  annotation_custom(court_image, -250, 250, -50, 420) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) +
+  ylim(-50, 420) +
+  ggtitle('Shot Chart: Andre Iguodala (2016 season)') +
+  theme_minimal()
+
+iguodala_shot_chart
+
+setwd()
+ggsave("../images/andre-iguodala-shot-chart.pdf", width=6.5, height=5)
+
+
+## Draymond Green Shot Chart ##
+green_scatterplot <- ggplot(data = green) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag))
+green_scatterplot
+
+green_shot_chart <- ggplot(data = green) +
+  annotation_custom(court_image, -250, 250, -50, 420) +
+  geom_point(aes(x = x, y = y, color = shot_made_flag)) +
+  ylim(-50, 420) +
+  ggtitle('Shot Chart: Draymond Green (2016 season)') +
+  theme_minimal()
+
+green_shot_chart
+ggsave("../images/draymond-green-shot-chart.pdf", width=6.5, height=5)
+
+
+
