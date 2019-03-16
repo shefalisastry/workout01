@@ -149,6 +149,6 @@ all_shot_chart <- ggplot(data = shots_data_summary) +
   ggtitle('Shot Chart: All Players Shot Charts (2016 season)') +
   theme_minimal() + facet_grid(~name) + theme_minimal()
 
-ggsave("../images/gsw-shot-charts.pdf", width=10, height=5)
-ggsave("../images/gsw-shot-charts.pdf", width=10, height=5)
+ggsave("../images/gsw-shot-charts.pdf", width = 8, height=7)
+ggsave("../images/gsw-shot-charts.png", width=8, height=7)
 
