@@ -4,12 +4,7 @@
 ## output(s): what are the outputs created when running the script? Summary files, dataframes
 
 getwd()
-setwd("Users/rsast/Desktop/workout01/data")
-
 setwd("C:/Users/rsast/Desktop/workout01/data")
-
-getwd()
-
 
 #Curry
 curry <- read.csv("stephen-curry.csv", stringsAsFactors = FALSE)
