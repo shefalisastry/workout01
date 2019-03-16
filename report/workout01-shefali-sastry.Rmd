@@ -8,23 +8,46 @@ output: github_document
 library(dplyr)
 ```
 
+# What's the secret behind the success of the Golden State Warriors? 
+
+In the last few years, the Warriors team hailing from the San Francisco Bay Area has been disrupting the national basketball community. With the rise of players from Steph Curry to Klay Thompson, we tend to attribute the team's newfound success to a few key players. However, a new analysis from the University of California Berkeley demonstrates that the unique skillsets of each player factors into the team's overall performance. 
+
+The goal behind this study involves understanding the dynamics of the types of points among these top players and to identify where their strengths lie.
+
+### Image
 ```{r out.width = '80%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('gsw-shot-charts.png')
 ```
+As you can see in the image above, Stephen Curry has made the most shots as possible.
 
 
+
+## Data Analysis Methodology
 ```{r}
 last <- read.csv("../data1/shots-data.csv", stringsAsFactors = FALSE)
 last
 aggregate(last$shot_made_flag, by = list(last$name), FUN = sum)
 ```
+### Image
+```{r out.width = '80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('gsw.png')
 
-```{r}
+```
+Klay Thompson, Kevin Durant, and Stephen Curry
+
+```{r eval = FALSE}
 select(summarize(arrange(last, desc(minutes_remaining), group_by = name), name, total = shot_made_flag, )
 arrange(summarize(group_by(last, name)))
 ```
 
-```{r}
+```{r eval = FALSE}
 arrange(summarize(group_by(last, name)), total = row(filter(two_point, name == two_point$name)))))
 ```
 
+## Conclusion
+
+The work above demonstrates that Stephen Curry performs far above the standard in terms of his 3-pointer performance. Because of this particular strength, as demonstrated in the chart that shows the distribution of his points, he has led the Golden State Warriors to a continuous series of unmatched wins. 
+
+Supporting his strengths are his teammates, are the other players. While Curry primarily focuses on shooting around the 3-point area, Andre Iguodala and Draymond Green stick towards the center, preferring to focus on the defensive side. As a result, their accuracy scores tend to be higher. 
+
+Overall, the team performs well because they are balanced. The data shows that each one of the players has a certain spot in the stadium and thus performs better. With this type of understanding, the Golden State Warriors will continue to win and reign as a competitive basketball team.
