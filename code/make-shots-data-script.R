@@ -1,12 +1,12 @@
-## title: short title
-## description: a short description of what the script is about
-## input(s): what are the inputs required by the script?
-## output(s): what are the outputs created when running the script?
+## title: Make Shots Data Preparation
+## description: The script helps clean the data and creates summary files as well as a single massive file.
+## input(s): Files from the players
+## output(s): what are the outputs created when running the script? Summary files, dataframes
 
 getwd()
-setwd("Users/rsast/Desktop/workout01/data1")
+setwd("Users/rsast/Desktop/workout01/data")
 
-setwd("C:/Users/rsast/Desktop/workout01/data1")
+setwd("C:/Users/rsast/Desktop/workout01/data")
 
 getwd()
 
@@ -18,7 +18,7 @@ curry$shot_made_flag[curry$shot_made_flag == "n"] <- "shot_no"
 curry$shot_made_flag[curry$shot_made_flag == "y"] <- "shot_yes"
 curry$minute <- curry$period*12 - curry$minutes_remaining
 write.csv(curry)
-sink( file = "stephen-curry.txt")
+sink( file = "stephen-curry-summary.txt")
 summary(curry)
 sink()
 
